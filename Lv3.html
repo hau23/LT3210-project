@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Level 3</title>
+
+<style>
+html {
+	font-family: "Comic Sans MS";
+}
+
+</style>
+
+<script src="script.js"></script>
+
+</head>
+
+<body onload="displayQuestion()">
+
+ <h1> Find the correct meaning </h1>
+
+ <p class="sentence"> --- </p>
+
+ <form id="choices">
+ <input type="radio" name="mc" id="input0" onclick="play()">
+ <span id="choice0"></span>
+ <br />
+
+ <input type="radio" name="mc" id="input1" onclick="play()">
+ <span id="choice1"></span>
+ <br />
+
+ <input type="radio" name="mc" id="input2" onclick="play()">
+ <span id="choice2"></span>
+ <br />
+
+ <input type="radio" name="mc" id="input3s" onclick="play()">
+ <span id="choice3"></span>
+ <br />
+
+ </form>
+
+ <p id="message"></p>
+
+ <button id="btn_next" onclick="displayQuestion()" disabled>Next</button>
+
+ </body>
+</html>
