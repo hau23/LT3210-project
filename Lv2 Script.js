@@ -19,7 +19,7 @@ var plate_y = -1;
 
 function draw()
 {
-	// Clear previous graphics (but do not erase the plate)	
+	// Clear previous graphics but do not erase the plate
 	ctx.clearRect(0, 0, canvas.width, canvas.height-10);
 
 	// Move the model answer
@@ -27,7 +27,7 @@ function draw()
 	answer_y += 3;
 
 	// Get model answer
-	var answer = words[answerIndex];
+	var answer = engwords[answerIndex];
 
 	// Draw model answer
 	ctx.font = "20px Comic Sans MS";
@@ -36,11 +36,6 @@ function draw()
 
 	// Calculate distance between plate and answer
 	var distance = answer_x - plate_x;
-
-	// Print coordinates
-	document.getElementById("plateX").innerHTML = plate_x;
-	document.getElementById("wordX").innerHTML = answer_x;
-	document.getElementById("dist").innerHTML = distance;
 
 	// Detect whether the word is below surface of plate
 	if (answer_y >= plate_y)
@@ -68,8 +63,8 @@ function getRandomChin()
 	
 	// Get rid of decimal places to make the random number an integer
 	var random_int = Math.floor(random_number);
-
-	return random_int;
+  
+  return random_int;
 }
 
 // Display random chinese word, draws plate & release a falling word
@@ -77,13 +72,8 @@ function play()
 {
 	canvas = document.getElementById("myCanvas");
 	ctx = canvas.getContext("2d");
-
-	// Select and display chinese word
-	answerIndex = getRandomChin();
-	var answer = engwords[answerIndex];
-	var shownchinword = engwords[answerIndex];
-	document.getElementById("question") = imageFileName;
 	
+
 	// Reset initial position of english word
 	answer_x = 0;
 	answer_y = 0;
@@ -101,7 +91,7 @@ function play()
 	clearInterval(timer);
 
 	// Start new animation
-	timer = setInterval("draw()", 100);
+	timer = setInterval(draw, 100);
 
 	document.getElementById("message").innerHTML = "Move the plate to catch the word!";
 
