@@ -7,7 +7,8 @@ var chinwords = ["疼痛","扶手椅","彎曲","毯","毛蟲","複雜"];
 var engwords = ["ache","armchair","bend","blanket","caterpillar","complicated"];
 
 // Index of model answer
-var answerIndex = -1;
+var asid = -1;
+var acid = -1;
 
 // Current position of model answer
 var answer_x = -1;
@@ -20,14 +21,16 @@ var plate_y = -1;
 function draw()
 {
 	// Clear previous graphics but do not erase the plate
-	ctx.clearRect(0, 0, canvas.width, canvas.height-10);
+	ctx.clearRect(0, 0, canvas.width, canvas.height -10);
+
+	// 
+    var answer = engwords[asid];
+    var x = chinwords[acid];
 
 	// Move the model answer
 	answer_x += 3;
 	answer_y += 3;
 
-	// Get model answer
-	var answer = engwords[answerIndex];
 
 	// Draw model answer
 	ctx.font = "20px Comic Sans MS";
@@ -43,13 +46,13 @@ function draw()
 		clearInterval(timer);
 	
 		// Detect whether the word landed on the plate
-		if ((distance < 50) && (distance > -50))
+		if ((distance < 50) && (distance > -50) && (a == 1))
 		{
-			document.getElementById("message").innerHTML = "Good Job!";
+			document.getElementById("message").innerHTML = "Correct! Good Catch!";
 		}
 		else
 		{
-			document.getElementById("message").innerHTML = "Uh Oh... Please try again! You can do it!";
+			document.getElementById("message").innerHTML = "Wrong... Please try again! You can do it!";
 		}
 	}
 
@@ -58,10 +61,17 @@ function draw()
 // Get random index for chinese word
 function getRandomChin()
 {
-	// Get a randon number between 0 and the length of the words array
+
+	var random_number = Math.random() * chinwords.length;
+	var random_int = Math.floor(random_number);
+  
+  return random_int;
+}
+
+// Get random index for english word
+function getRandomEng()
+{
 	var random_number = Math.random() * engwords.length;
-	
-	// Get rid of decimal places to make the random number an integer
 	var random_int = Math.floor(random_number);
   
   return random_int;
@@ -73,12 +83,20 @@ function play()
 	canvas = document.getElementById("myCanvas");
 	ctx = canvas.getContext("2d");
 	
-	// Select and display an image
-	// answerIndex = getRandomChin();
-	// var answer = engwords[answerIndex];
-	// var showchinword = chinwords[answerIndex];
-	// document.getElementById("question") = showchinword;
-	
+// Select and display chinese word
+  acid = getRandomChin();
+  asid = getRandomEng();
+  var x = chinwords[acid];
+  document.getElementById("ms").innerHTML = x;
+  var answer = engwords[asid];
+  if (acid == asid) 
+  {
+  a = 1;
+  } 
+  else {
+  a = 2;
+  }
+
 	// Reset initial position of english word
 	answer_x = 0;
 	answer_y = 0;
@@ -90,7 +108,7 @@ function play()
 	plate_x = 0;
 	plate_y = canvas.height - 10; 
 	ctx.fillStyle = "#5F9EA0";	
-	ctx.fillRect(plate_x, plate_y,70,10);
+	ctx.fillRect(plate_x, plate_y,100,10);
 
 	// Stop previous animation, if any
 	clearInterval(timer);
@@ -105,7 +123,7 @@ function play()
 function moveleft()
 {
 	// Erase previous plate
-	ctx.clearRect(plate_x, plate_y, 70, 10);
+	ctx.clearRect(plate_x, plate_y, 100, 10);
 
 	// Move plate to left
 	if (plate_x > 0)
@@ -115,7 +133,7 @@ function moveleft()
 
 	// Draw new plate
 	ctx.fillStyle = "#5F9EA0";	
-	ctx.fillRect(plate_x, plate_y, 70, 10);
+	ctx.fillRect(plate_x, plate_y, 100, 10);
 
 }
 
@@ -123,7 +141,7 @@ function moveright()
 {
 
 	// Erase previous plate
-	ctx.clearRect(plate_x, plate_y, 70, 10);
+	ctx.clearRect(plate_x, plate_y, 100, 10);
 
 	// Move plate to right
 	if (plate_x < (canvas.width - 50))
@@ -133,6 +151,6 @@ function moveright()
 
 	// Draw new plate
 	ctx.fillStyle = "#5F9EA0";	
-	ctx.fillRect(plate_x, plate_y, 70, 10);
+	ctx.fillRect(plate_x, plate_y, 100, 10);
 
 }
