@@ -9,12 +9,13 @@
 
 html {
 	min-height: 100vh;
+	/* background: radial-gradient(inner color, outer color) */
 	background: radial-gradient(#E6E6FA, #D8BFD8)
 }
 
 body {
 	margin: 0;
-	/* background: radial-gradient(inner color, outer color) */
+
 }
 
 
