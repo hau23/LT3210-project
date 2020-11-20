@@ -10,8 +10,11 @@
 html {
   padding: 0;
   margin: 0;
+  min-height: 100vh;
   background: #F0F8FF;
-  font-family: Comic Sans MS;
+}
+h1 {
+  font-family: StayHappy;
 }
 canvas {
   border:1px solid #5F9EA0;
@@ -25,13 +28,21 @@ button {
   font: 20px Comic Sans MS;
   display: inline-block;
 }
+#game {
+  text-align: center;
+  margin: 0 auto;
+}
 </style>
 
 </head>
 
 <body>
+<div id="game">
 
-<h1> Catch the Correct Word </h1>
+<h1> Words Landing Game </h1>
+<h3 span style="color:#008B8B"> Be careful! Only catch the correct meaning! </span></h3>
+<br/>
+
 <h2 id="ms"></h2>
 
 <p id="question"></p>
@@ -46,5 +57,6 @@ button {
 <br/>
 
 <p id="message">Press Play</p>
+</div>
 </body>
 </html>
