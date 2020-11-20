@@ -9,16 +9,17 @@
 
 html {
 	min-height: 100vh;
+	background: radial-gradient(#E6E6FA, #D8BFD8)
 }
 
 body {
 	margin: 0;
-	/* background: radial-gradient(inner color, outside color) */
+	/* background: radial-gradient(inner color, outer color) */
 }
 
 
 .page-title {
-	/* color: */
+	/* color */
 	font-family: StayHappy;
 	font-weight: normal;
 	text-align: center;
@@ -35,6 +36,7 @@ body {
 	font-family: Trebuchet MS;
 	font-weight: normal;
 	font-size: 3em;
+	color: #9400D3;
 }
 
 .game-container {
@@ -116,7 +118,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	color: #FF6D00;
+	color: #8B008B;
 	font-family: stayHappy, serif;
 	transition: background-color 500ms, font-size 500ms;
 }
@@ -126,6 +128,7 @@ body {
 }
 
 .overlay-text.visible {
+	color: #BA55D3;
 	display: flex;
 	animation: overlay-grow 500ms forwards;
 }

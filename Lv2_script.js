@@ -33,7 +33,7 @@ function draw()
 
 
 	// Draw model answer
-	ctx.font = "20px Comic Sans MS";
+	ctx.font = "20px Trebuchet MS";
 	ctx.fillStyle = "black";
 	ctx.fillText(answer, answer_x, answer_y);
 
