@@ -81,7 +81,7 @@
     </style>
 </head>
 
-<body onload="displayQuestion()">
+<body onload="Question()">
     <div class="background-container">
         <div class="header">
             <h1>Multiple Choices Game</h1>
@@ -110,14 +110,14 @@
             <span id="choice2"></span>
             <br />
 
-            <input type="radio" name="mc" id="input3s" onclick="play()">
+            <input type="radio" name="mc" id="input3" onclick="play()">
             <span id="choice3"></span>
             <br />
         </form>
 
         <p id="message"></p>
 
-        <button id="btn_next" onclick="displayQuestion()" disabled>Next</button>
+        <button id="pressnext" onclick="Question()" disabled>Next</button>
 
     </div>
 </body>
