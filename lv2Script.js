@@ -132,7 +132,7 @@ function moveleft()
 	}
 
 	// Draw new plate
-	ctx.fillStyle = "#5F9EA0";	
+	ctx.fillStyle = "#6495ED";	
 	ctx.fillRect(plate_x, plate_y, 100, 10);
 
 }
@@ -150,7 +150,7 @@ function moveright()
 	}
 
 	// Draw new plate
-	ctx.fillStyle = "#5F9EA0";	
+	ctx.fillStyle = "#6495ED";	
 	ctx.fillRect(plate_x, plate_y, 100, 10);
 
 }
