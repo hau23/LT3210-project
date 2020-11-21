@@ -78,6 +78,13 @@
             height: 100%;
             z-index: -1;
         }
+        .MCcontainer {
+            margin: 1px;
+            border-radius: 20px;
+            border-color: #FFA500;
+            background-color: #FFFFE0;
+            padding: 20px;
+            box-shadow: 5px 10px #BDB76B;
     </style>
 </head>
 
@@ -97,6 +104,7 @@
 
         <img id="Picture" src="" alt="No image" width="200px" />
 
+        <div class="MCcontainer">
         <form id="choices">
             <input type="radio" name="mc" id="input0" onclick="play()">
             <span id="choice0"></span>
@@ -114,7 +122,9 @@
             <span id="choice3"></span>
             <br />
         </form>
+        </div>
 
+        <br/>
         <p id="message"></p>
 
         <button id="pressnext" onclick="Question()" disabled>Next</button>
