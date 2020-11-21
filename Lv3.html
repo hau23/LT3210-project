@@ -1,48 +1,96 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>Level 3</title>
+    <meta charset="utf-8" />
 
-<style>
-html {
-	font-family: "Comic Sans MS";
-}
+    <title>Multiple Choices Game</title>
 
-</style>
+    <script src="script.js"></script>
 
-<script src="script.js"></script>
 
+    <style>
+        @font-face {
+            font-family: "StayHappy";
+            src: url("font/StayHappy.woff");
+        }
+
+        html {
+            font-family: "Trebuchet MS";
+        }
+
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: "StayHappy";
+            font-weight: 800;
+            text-align: center;
+            font-size: 5em;
+        }
+
+        .background-container {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: block;
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+            left: 0;
+            top: 0;
+            align-items: center;
+            justify-content: center;
+            z-index: -1;
+        }
+
+        .background-container:before {
+            content: "";
+            display: block;
+            background-image: url('image/background.jpg');
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.6;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body onload="displayQuestion()">
+    <div class="background-container">
+        <h1> Multiple Choices Game </h1>
 
- <h1> Find the correct meaning </h1>
+        <h2> Find the correct meaning </h2>
 
- <p class="sentence"> --- </p>
+        <p class="sentence"> --- </p>
 
- <form id="choices">
- <input type="radio" name="mc" id="input0" onclick="play()">
- <span id="choice0"></span>
- <br />
+        <form id="choices">
+            <input type="radio" name="mc" id="input0" onclick="play()">
+            <span id="choice0"></span>
+            <br />
 
- <input type="radio" name="mc" id="input1" onclick="play()">
- <span id="choice1"></span>
- <br />
+            <input type="radio" name="mc" id="input1" onclick="play()">
+            <span id="choice1"></span>
+            <br />
 
- <input type="radio" name="mc" id="input2" onclick="play()">
- <span id="choice2"></span>
- <br />
+            <input type="radio" name="mc" id="input2" onclick="play()">
+            <span id="choice2"></span>
+            <br />
 
- <input type="radio" name="mc" id="input3s" onclick="play()">
- <span id="choice3"></span>
- <br />
+            <input type="radio" name="mc" id="input3s" onclick="play()">
+            <span id="choice3"></span>
+            <br />
+        </form>
 
- </form>
+        <p id="message"></p>
 
- <p id="message"></p>
+        <button id="btn_next" onclick="displayQuestion()" disabled>Next</button>
 
- <button id="btn_next" onclick="displayQuestion()" disabled>Next</button>
-
- </body>
+    </div>
+</body>
 </html>

@@ -1,106 +1,140 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
+    <meta charset="utf-8" />
 
-<title>Synonyms and Antonyms</title>
+    <title>Synonyms and Antonyms</title>
 
-<style>
-</style>
+    <link rel="stylesheet" href="lv4style.css">
 
-<link rel="stylesheet" href="lv4style.css">
-<script src="lv4script.js"></script>
+    <script src="lv4Script.js"></script>
+
+    <style>
+        @font-face {
+            font-family: "StayHappy";
+            src: url("font/StayHappy.woff");
+        }
+
+        body {
+            text-align: center;
+            font-family: "Trebuchet MS";
+        }
+
+        h1 {
+            font-family: "StayHappy";
+            font-weight: 800;
+            text-align: center;
+            font-size: 5em;
+        }
+
+        .background-container {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: block;
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+            left: 0;
+            top: 0;
+            align-items: center;
+            justify-content: center;
+            z-index: -1;
+        }
+
+        .background-container:before {
+            content: "";
+            display: block;
+            background-image: url('image/background.jpg');
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.6;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="background-container">
+        <h1>Synonyms and Antonyms</h1>
+        <h2>Replace the words with the correct synonym</h2>
 
-<h2>Replace the words with the correct synonym</h2>
+        rehabilitate
+        <!--restore-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
 
-rehabilitate
-<!--restore-->
-</br>
+        retain
+        <!--reserve-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
 
-<form>
-<input type="text" id="input_answer">
-</form>
+        wilt
+        <!--wither-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
 
-<button onclick="enter()">Enter</button>
-</br>
-</br>
+        red
+        <!--scarlet-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
 
-retain
-<!--reserve-->
-</br>
+        firm
+        <!--corporation-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
 
-<form>
-<input type="text" id="input_answer">
-</form>
+        floor
+        <!--ground-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
 
-<button onclick="enter()">Enter</button>
-</br>
-</br>
+        stunned
+        <!--astonished-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
 
-wilt
-<!--wither-->
-</br>
-
-<form>
-<input type="text" id="input_answer">
-</form>
-
-<button onclick="enter()">Enter</button>
-</br>
-</br>
-
-red
-<!--scarlet-->
-</br>
-
-<form>
-<input type="text" id="input_answer">
-</form>
-
-<button onclick="enter()">Enter</button>
-</br>
-</br>
-
-firm
-<!--corporation-->
-</br>
-
-<form>
-<input type="text" id="input_answer">
-</form>
-
-<button onclick="enter()">Enter</button>
-</br>
-</br>
-
-floor
-<!--ground-->
-</br>
-
-<form>
-<input type="text" id="input_answer">
-</form>
-
-<button onclick="enter()">Enter</button>
-</br>
-</br>
-
-stunned
-<!--astonished-->
-</br>
-
-<form>
-<input type="text" id="input_answer">
-</form>
-
-<button onclick="enter()">Enter</button>
-</br>
-</br>
-
-<p id="myScore">Score: 0</p>
-
+        <p id="myScore">Score: 0</p>
+    </div>
 </body>
 </html>

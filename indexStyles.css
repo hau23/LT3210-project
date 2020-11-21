@@ -3,33 +3,35 @@
     src: url("font/StayHappy.woff");
 }
 
+html {
+    height: 100%;
+}
+
 *{
     box-sizing: border-box;
 }
 
 body {
+    height: 100%;
     font-family: 'Trebuchet MS';
-    background-image: url('image/background.jpg');
-    background-size: auto;
+    /*background-image: url('image/background.jpg');
+    background-size: auto;*/
 }
 
-/*.background-container {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}*/
-
-/*.background-container img {
+.background-container {
     position: absolute;
-    opacity: 0.6;
-    left: 0;
+    height: 100%;
+    display: block;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    left:0;
     top: 0;
-    width: 100%;
-    height: auto;
-}*/
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
 .background-container:before {
     content:"";
     display: block;
@@ -40,11 +42,13 @@ body {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.75;
+    opacity: 0.6;
+    height: 100%;
+    z-index: -1;
 }
 
-/*.header {
-    padding: 30px;
+.header {
+    padding: 10px;
     text-align: center;
     color: black;
 }
@@ -52,12 +56,13 @@ body {
 .header h1 {
     font-size: 70px;
     font-family: StayHappy;
-} */
+}
 
 .top-menu {
     overflow: hidden;
     background-color: black;
     position: relative;
+    display: block;
 }
 
 .top-menu a{
@@ -82,6 +87,7 @@ body {
     position: relative;
     text-align: center;
     margin: 12px auto;
+    position: relative;
 }
 
 .front-game-container {
