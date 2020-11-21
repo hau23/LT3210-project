@@ -21,6 +21,36 @@
         width: 100%;
     }
 
+    body {
+        font-family: "Trebuchet MS";
+    }
+
+    .header h1 {
+        padding: 10px;
+        font-size: 70px;
+        font-family: StayHappy;
+    }
+
+    .top-menu {
+        overflow: hidden;
+        background-color: black;
+        position: relative;
+        display: block;
+    }
+
+    .top-menu a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .top-menu a:hover {
+        background-color: lightgray;
+        color: black;
+    }
+
     .background-container {
         position: absolute;
         height: 100%;
@@ -52,7 +82,7 @@
         z-index: -1;
     }
 
-    h1 {
+    /*h1 {
         font-family: "StayHappy";
         font-weight: 800;
         text-align: center;
@@ -62,7 +92,7 @@
     h3 {
         font-family: "StayHappy";
         font-size: 30px;
-    }
+    }*/ 
 
     canvas {
         border:1px solid #5F9EA0;
@@ -90,7 +120,15 @@
     <div class="background-container">
         <div id="game">
 
-            <h1>Words Landing Game</h1>
+            <div class="header">
+                <h1>Words Landing Game</h1>
+            </div>
+            <div class="top-menu">
+                <a href="lv1.html">Level 1 Game</a>
+                <a href="lv2.html">Level 2 Game</a>
+                <a href="lv3.html">Level 3 Game</a>
+                <a href="lv4.html">Level 4 Game</a>
+            </div>
             <h3 span style="color:#008B8B"> Be careful! Only catch the correct meaning! </h3>
             <br />
 

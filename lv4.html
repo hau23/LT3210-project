@@ -20,11 +20,30 @@
             font-family: "Trebuchet MS";
         }
 
-        h1 {
-            font-family: "StayHappy";
-            font-weight: 800;
+        .header h1 {
+            padding: 10px;
+            font-size: 70px;
+            font-family: StayHappy;
+        }
+
+        .top-menu {
+            overflow: hidden;
+            background-color: black;
+            position: relative;
+            display: block;
+        }
+
+        .top-menu a {
+            float: left;
+            display: block;
+            color: white;
             text-align: center;
-            font-size: 5em;
+            padding: 10px;
+        }
+
+        .top-menu a:hover {
+            background-color: lightgray;
+            color: black;
         }
 
         .background-container {
@@ -61,7 +80,16 @@
 
 <body>
     <div class="background-container">
-        <h1>Synonyms and Antonyms</h1>
+        <div class="header">
+            <h1>Synonyms and Antonyms</h1>
+        </div>
+        <div class="top-menu">
+            <a href="lv1.html">Level 1 Game</a>
+            <a href="lv2.html">Level 2 Game</a>
+            <a href="lv3.html">Level 3 Game</a>
+            <a href="lv4.html">Level 4 Game</a>
+        </div>
+
         <h2>Replace the words with the correct synonym</h2>
 
         rehabilitate
