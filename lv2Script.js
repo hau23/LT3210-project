@@ -107,7 +107,7 @@ function play()
 	// Draw plate
 	plate_x = 0;
 	plate_y = canvas.height - 10; 
-	ctx.fillStyle = "#5F9EA0";	
+	ctx.fillStyle = "#6495ED";	
 	ctx.fillRect(plate_x, plate_y,100,10);
 
 	// Stop previous animation, if any
