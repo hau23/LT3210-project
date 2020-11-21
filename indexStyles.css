@@ -1,0 +1,76 @@
+﻿@font-face {
+    font-family: "StayHappy";
+    src: url("font/StayHappy.woff");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS';
+    background-image: url('background.jpg');
+    background-size: auto;
+}
+
+img {
+    
+}
+
+/*.header {
+    padding: 30px;
+    text-align: center;
+    color: black;
+}
+
+.header h1 {
+    font-size: 70px;
+    font-family: StayHappy;
+} */
+
+.top-menu {
+    overflow: hidden;
+    background-color: black;
+}
+
+.top-menu a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.top-menu a:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.front-page-container {
+    background-color: white;
+    color: black;
+    border-radius: 10px;;
+    box-shadow: 3px 3px lightgray;
+    width: 87.5%;
+    position: relative;
+    text-align: center;
+    margin: 12px auto;
+}
+
+.front-game-container {
+    background-color: lightyellow;
+    border: 14px;
+    box-shadow: 3px 3px lightgray;
+    border-radius: 2px;
+    margin: 20px;
+    vertical-align: top;
+    display: inline-block;
+    width: 40%;
+}
+
+.image-container {
+    width: 256px;
+    height: 144px;
+
+
+}
