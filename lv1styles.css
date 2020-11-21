@@ -10,7 +10,9 @@
 html {
 	min-height: 100vh;
 	/* background: radial-gradient(inner color, outer color) */
-	background: radial-gradient(#E6E6FA, #D8BFD8)
+	/*background: radial-gradient(#E6E6FA, #D8BFD8)*/
+	background-image: url('image/background.jpg');
+	background-size: auto;
 }
 
 body {
@@ -22,7 +24,7 @@ body {
 .page-title {
 	/* color */
 	font-family: StayHappy;
-	font-weight: normal;
+	font-weight: 700;
 	text-align: center;
 	font-size:6em;
 }
@@ -37,7 +39,7 @@ body {
 	font-family: Trebuchet MS;
 	font-weight: normal;
 	font-size: 3em;
-	color: #9400D3;
+	/*color: #9400D3;*/
 }
 
 .game-container {
