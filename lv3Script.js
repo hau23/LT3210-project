@@ -41,7 +41,7 @@ function RandomPosition()
 	return random_int;
 }
 
-console.log(index);
+var index = [];
 function Question()
 {
 	// Distractors
