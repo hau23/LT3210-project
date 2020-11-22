@@ -14,8 +14,6 @@ html {
 body {
     height: 100%;
     font-family: 'Trebuchet MS';
-    /*background-image: url('image/background.jpg');
-    background-size: auto;*/
     margin: 0px;
 }
 
@@ -47,7 +45,7 @@ body {
     z-index: -1;
 }
 
-/**/.header {
+.header {
     padding: 10px;
     text-align: center;
     color: black;

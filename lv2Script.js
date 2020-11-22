@@ -18,6 +18,24 @@ var answer_y = -1;
 var plate_x = -1;
 var plate_y = -1;
 
+// Get random index for chinese word
+function getRandomChin()
+{
+	var random_number = Math.random() * chinwords.length;
+	var random_int = Math.floor(random_number);
+
+  return random_int;
+}
+
+// Get random index for english word
+function getRandomEng()
+{
+	var random_number = Math.random() * engwords.length;
+	var random_int = Math.floor(random_number);
+  
+  return random_int;
+}
+
 function draw()
 {
 	// Clear previous graphics but do not erase the plate
@@ -37,7 +55,7 @@ function draw()
 	ctx.fillStyle = "black";
 	ctx.fillText(answer, answer_x, answer_y);
 
-	// Calculate distance between plate and answer
+	// Distance between plate and answer
 	var distance = answer_x - plate_x;
 
 	// Detect whether the word is below surface of plate
@@ -50,6 +68,10 @@ function draw()
 		{
 			document.getElementById("message").innerHTML = "Correct! Good Catch!";
 		}
+		else if ((distance > 15) && (a == 2))
+		{
+			document.getElementById("message").innerHTML = "Correct! Good Job!";
+		}
 		else
 		{
 			document.getElementById("message").innerHTML = "Wrong... Please try again! You can do it!";
@@ -58,24 +80,6 @@ function draw()
 
 }
 
-// Get random index for chinese word
-function getRandomChin()
-{
-
-	var random_number = Math.random() * chinwords.length;
-	var random_int = Math.floor(random_number);
-  
-  return random_int;
-}
-
-// Get random index for english word
-function getRandomEng()
-{
-	var random_number = Math.random() * engwords.length;
-	var random_int = Math.floor(random_number);
-  
-  return random_int;
-}
 
 // Display random chinese word, draws plate & release a falling word
 function play()
@@ -107,7 +111,7 @@ function play()
 	// Draw plate
 	plate_x = 0;
 	plate_y = canvas.height - 10; 
-	ctx.fillStyle = "#6495ED";	
+	ctx.fillStyle = "#5F9EA0";	
 	ctx.fillRect(plate_x, plate_y,100,10);
 
 	// Stop previous animation, if any
@@ -132,7 +136,7 @@ function moveleft()
 	}
 
 	// Draw new plate
-	ctx.fillStyle = "#6495ED";	
+	ctx.fillStyle = "#5F9EA0";	
 	ctx.fillRect(plate_x, plate_y, 100, 10);
 
 }
@@ -150,7 +154,7 @@ function moveright()
 	}
 
 	// Draw new plate
-	ctx.fillStyle = "#6495ED";	
+	ctx.fillStyle = "#5F9EA0";	
 	ctx.fillRect(plate_x, plate_y, 100, 10);
 
 }

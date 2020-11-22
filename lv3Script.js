@@ -1,5 +1,5 @@
 // Arrays to store terms
-var terms = ["agriculture","business","industry","landscape","literature","guidebook","journal","manufacture"];
+var terms = ["agriculture","business","industry","landscape","literature","guidebook","journal","manufacture","artificial","campaign"];
 var index = []
 // Global variable for position of correct answer
 var answerPosition = -1;
@@ -13,7 +13,7 @@ function Distractor()
 	do 
 	{
 	// Get a randon number between 0 and the length of the words array
-	var random_number = Math.random() * terms.length -1;
+	var random_number = Math.random() * (terms.length -1);
 	var random_int = Math.floor(random_number);
 
 	// Check overlap 
@@ -25,14 +25,7 @@ function Distractor()
 
 	return random_int;
 }
-// Get random index for image
-function RandomImage()
-{
-	var random_number = Math.random() * terms.length;
-	var random_int = Math.floor(random_number);
 
-	return random_int;
-}
 function RandomPosition()
 {
 
@@ -47,6 +40,8 @@ function RandomPosition()
 
 	return random_int;
 }
+
+
 function Question()
 {
 	// Distractors
@@ -60,8 +55,10 @@ function Question()
 	document.getElementById("choice3").innerHTML = terms[choice3Index];
 
 	// Image
-	var answerIndex = RandomImage();
+	var answerIndex = RandomPosition();
 	var answer = terms[answerIndex];
+	// take term index
+	var termsindex = terms.indexOf(answer)
 	var imageFileName = answer + ".jpg";
 	document.getElementById("Picture").src = "image/" + imageFileName;
 	
