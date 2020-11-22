@@ -7,7 +7,7 @@ var answerPosition = -1;
 // Get random index for distractors
 function Distractor()
 {
-	var random_number = Math.random() * english.length;
+	var random_number = Math.random() * terms.length;
 	var random_int = Math.floor(random_number);
 
 	return random_int;
@@ -35,10 +35,10 @@ function Question()
 	var choice1Index = Distractor();	
 	var choice2Index = Distractor();	
 	var choice3Index = Distractor();
-	document.getElementById("choice0").innerHTML = english[choice0Index];
-	document.getElementById("choice1").innerHTML = english[choice1Index];
-	document.getElementById("choice2").innerHTML = english[choice2Index];
-	document.getElementById("choice3").innerHTML = english[choice3Index];
+	document.getElementById("choice0").innerHTML = terms[choice0Index];
+	document.getElementById("choice1").innerHTML = terms[choice1Index];
+	document.getElementById("choice2").innerHTML = terms[choice2Index];
+	document.getElementById("choice3").innerHTML = terms[choice3Index];
 
 	// Image
 	var answerIndex = RandomImage();
