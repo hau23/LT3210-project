@@ -17,7 +17,7 @@ function Distractor()
 	var random_int = Math.floor(random_number);
 
 	// Check overlap 
-	var generatedin = terms.includes(random_int);
+	var index = terms.includes(random_int);
 
 	} while (generatedin)
 
@@ -73,7 +73,7 @@ function Question()
 	document.getElementById("Picture").src = "image/" + imageFileName;
 	
 	// / Select a position for the answer & update 
-	answerPosition = answerIndex;
+	answerPosition = RandomPosition(); //answerIndex
 
 	if (answerPosition == 0)
 	{
