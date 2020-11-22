@@ -4,8 +4,8 @@ var score = 0;
 
 function start()
 {
-	document.getElementById("display").innerHTML = q1;
-	var q1 = "rehabilitate"
+	var answerInput = document.getElementById("answer");
+	var answer = answerInput.value;
 	
 }
 
@@ -13,7 +13,7 @@ function hint()
 {
 	var q1hint = "restore";
 	var q1hint = q1hint.replace(/a|e|i|o|u/g, "*")
-	document.getElementById("q1").value = q1hint;
+	document.getElementById("q1hint").value = q1hint;
 
 	var q2 = "reserve";
 	var q2hint = q2.replace(/a|e|i|o|u/g, "*")
@@ -39,7 +39,7 @@ function feedback()
 {
 	var feedback = "";
 	
-	if (correct)
+	if ("answer" = correct)
 	{
 		feedback = "Correct!";
 	}
@@ -52,13 +52,13 @@ function feedback()
 	document.getElementById("feedback").innerHTML = feedback;
 }
 
-function play()
+function next()
 {
 	var answer = document.getElementById("answer").value;
-	var correct = ;
+	var q1correct = "restore";
 	
 	var feedback = "You're correct!";
-	if (answer != correct)
+	if (answer = correct)
 	{
  		feedback = "The correct answer is "" + correct + ".";
 	}
