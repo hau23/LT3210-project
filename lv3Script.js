@@ -32,7 +32,7 @@ function RandomPosition()
 
 	// Check overlap 
 	var generatedin = terms.includes(random_int);
-	
+
 	} while (generatedin)
 
 	return random_int;
