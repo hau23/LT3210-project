@@ -1,0 +1,120 @@
+	@font-face {
+		font-family: "StayHappy";
+		src: url("font/StayHappy.woff");
+	}
+
+    html {
+        padding: 10px;
+        margin: auto;
+        min-height: 100vh;
+        background: #F0F8FF;
+        width: 50%;
+    }
+
+    body {
+        font-family: "Trebuchet MS";
+		text-align: center;
+    }
+
+    .header h1 {
+        padding: 10px;
+        font-size: 70px;
+        font-family: StayHappy;
+    }
+
+    .top-menu {
+        overflow: hidden;
+        background-color: black;
+        position: relative;
+        display: block;
+    }
+
+    .top-menu a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .top-menu a:hover {
+        background-color: lightgray;
+        color: black;
+    }
+
+    .background-container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: block;
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+        left: 0;
+        top: 0;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+
+    .background-container:before {
+        content: "";
+        display: block;
+        background-image: url('image/background.jpg');
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.43;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    h1 {
+        font-family: "StayHappy";
+        font-weight: 800;
+        text-align: center;
+        font-size: 5em;
+		margin: auto;
+		padding: 10px;
+    }
+
+
+    canvas {
+        border: 1px solid #6495ED;
+        background-color: #ADD8E6;
+    }
+
+	p {
+		font: 20px Trebuchet MS;
+		}
+
+    button {
+		border: none;
+		background-color: #6495ED;
+		text-align: center;
+		padding: 10px;
+		font: 15px Trebuchet MS;
+		display: inline-block;
+	}
+	
+	button:hover {
+		background-color: #52dcff;
+	}
+	
+	input {
+		border: none;
+		background-color: white;
+		text-align: center;
+		padding: 10px;
+		font: 15px Trebuchet MS;
+		display: inline-block;
+	}
+
+    #game {
+    text-align: center;
+    margin: auto;
+}
