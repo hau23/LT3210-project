@@ -1,33 +1,19 @@
-@font-face {
-	font-family: "StayHappy";
-	src: url("font/StayHappy.woff");
-}
-
-h1 {
-	color: black;
-	font-family: StayHappy;
-	text-align: center;
-}
-
-p {
-	font-family: Trebuchet MS;
-}
-
-    @font-face {
-        font-family: "StayHappy";
-        src: url("font/StayHappy.woff");
-    }
+	@font-face {
+		font-family: "StayHappy";
+		src: url("font/StayHappy.woff");
+	}
 
     html {
-        padding: 0;
-        margin: 0;
+        padding: 10px;
+        margin: auto;
         min-height: 100vh;
         background: #F0F8FF;
-        width: 100%;
+        width: 50%;
     }
 
     body {
         font-family: "Trebuchet MS";
+		text-align: center;
     }
 
     .header h1 {
@@ -92,28 +78,43 @@ p {
         font-weight: 800;
         text-align: center;
         font-size: 5em;
+		margin: auto;
+		padding: 10px;
     }
 
-    /* h3 {
-        font-family: "StayHappy";
-        font-size: 30px;
-    } */
 
     canvas {
-        border:1px solid #6495ED;
+        border: 1px solid #6495ED;
         background-color: #ADD8E6;
     }
 
+	p {
+		font: 20px Trebuchet MS;
+		}
+
     button {
-    border: none;
-    background-color: #6495ED;
-    text-align: center;
-    padding: 5px 10px;
-    font: 20px Trebuchet MS;
-    display: inline-block;
-}
+		border: none;
+		background-color: #6495ED;
+		text-align: center;
+		padding: 10px;
+		font: 15px Trebuchet MS;
+		display: inline-block;
+	}
+	
+	button:hover {
+		background-color: #52dcff;
+	}
+	
+	input {
+		border: none;
+		background-color: white;
+		text-align: center;
+		padding: 10px;
+		font: 15px Trebuchet MS;
+		display: inline-block;
+	}
 
     #game {
     text-align: center;
-    margin: 0 auto;
+    margin: auto;
 }
