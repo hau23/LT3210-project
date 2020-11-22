@@ -10,7 +10,7 @@ function Distractor()
 	// var random_number = Math.random() * terms.length;
 	// var random_int = Math.floor(random_number);
 	return Math.floor(Math.random() * (terms.length - 1 + 1) ) + 0;
-	Math.floor(Math.random() * (terms.length - 1 + 1) ) + 0;
+
 
 	// return random_int;
 }
@@ -27,9 +27,9 @@ function RandomPosition()
 	// Get a randon number between 0 and the length of the words array
 	var random_number = Math.random() * 7;
 	var random_int = Math.floor(random_number);
-	
+
 	// Check overlap 
-	var generatedin = terms.includes(answerIndex);
+	var generatedin = terms.includes(random_int);
 	do 
 	{
 		callback();
@@ -52,7 +52,8 @@ function Question()
 	// Image
 	var answerIndex = RandomImage();
 	var answer = terms[answerIndex];
-	var imageFileName = answer + ".jpg";
+	var url('image/imageFileName') = answer + ".jpg";
+
 	document.getElementById("Picture").src = imageFileName;
 	
 	// / Select a position for the answer & update 

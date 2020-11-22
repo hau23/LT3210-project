@@ -5,88 +5,10 @@
 
     <title>Multiple Choices Game</title>
 
+    <link rel="stylesheet" href="lv3styles.css">
+
     <script src="lv3Script.js"></script>
 
-
-    <style>
-        @font-face {
-            font-family: "StayHappy";
-            src: url("font/StayHappy.woff");
-        }
-
-        html {
-            font-family: "Trebuchet MS";
-        }
-
-        body {
-            text-align: center;
-        }
-
-        .header h1 {
-            padding: 10px;
-            font-size: 70px;
-            font-family: StayHappy;
-        }
-
-        .top-menu {
-            overflow: hidden;
-            background-color: black;
-            position: relative;
-            display: block;
-        }
-
-        .top-menu a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .top-menu a:hover {
-            background-color: lightgray;
-            color: black;
-        }
-
-
-        .background-container {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            display: block;
-            margin: 0px;
-            border: 0px;
-            padding: 0px;
-            left: 0;
-            top: 0;
-            align-items: center;
-            justify-content: center;
-            z-index: -1;
-        }
-
-        .background-container:before {
-            content: "";
-            display: block;
-            background-image: url('image/background.jpg');
-            background-size: cover;
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            opacity: 0.43;
-            height: 100%;
-            z-index: -1;
-        }
-        .MCcontainer {
-            margin: 1px;
-            border-radius: 20px;
-            border-color: #FFA500;
-            background-color: #FFFFE0;
-            padding: 20px;
-            box-shadow: 5px 10px #BDB76B;
-        }
-    </style>
 </head>
 
 <body onload="Question()">
