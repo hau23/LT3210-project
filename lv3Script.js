@@ -21,7 +21,7 @@ function Distractor()
 
 	} while (generatedin)
 
-	index.push('random_int');
+	index.push(random_int);
 
 	return random_int;
 }
