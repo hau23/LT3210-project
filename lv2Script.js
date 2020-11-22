@@ -68,9 +68,9 @@ function draw()
 		{
 			document.getElementById("message").innerHTML = "Correct! Good Catch!";
 		}
-		else if ((distance > 50) && (a == 2))
+		else if ((distance > 10) && (a == 2))
 		{
-			document.getElementById("message").innerHTML = "Correct! Good Catch!";
+			document.getElementById("message").innerHTML = "Correct! Good Job!";
 		}
 		else
 		{
