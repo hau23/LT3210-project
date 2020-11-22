@@ -1,5 +1,5 @@
 // Arrays to store terms
-var terms = ["agriculture","industry","landscape","literature","guidebook"];
+var terms = ["agriculture","business","industry","landscape","literature","guidebook","journal","manufacture"];
 
 // Global variable for position of correct answer
 var answerPosition = -1;
@@ -23,7 +23,7 @@ function RandomImage()
 function RandomPosition()
 {
 	// Get a randon number between 0 and the length of the words array
-	var random_number = Math.random() * 4;
+	var random_number = Math.random() * 7;
 	var random_int = Math.floor(random_number);
 
 	return random_int;
