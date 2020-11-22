@@ -9,8 +9,8 @@ function Distractor()
 {
 	// var random_number = Math.random() * terms.length;
 	// var random_int = Math.floor(random_number);
-	return Math.floor(Math.random() * (max - min + 1) ) + min;
-	Math.floor(Math.random() * (max - min + 1) ) + min;
+	return Math.floor(Math.random() * (terms.length - 0 + 1) ) + 0;
+	Math.floor(Math.random() * (terms.length - 0 + 1) ) + 0;
 
 	// return random_int;
 }
