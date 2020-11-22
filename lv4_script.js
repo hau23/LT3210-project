@@ -11,6 +11,7 @@ function q1_input()
 	else
 	{
 		q1_feedbackElement.innerHTML = "Try again!";
+
 	}
 	
 	/*clear previous answer*/
@@ -251,7 +252,7 @@ function q16_input()
 	}
 	else
 	{
-		q16feedbackElement.innerHTML = "Try again?";
+		q16_feedbackElement.innerHTML = "Try again?";
 	}
 	
 	document.getElementById("q16_answer").value = "";
@@ -283,7 +284,7 @@ function q18_input()
 	}
 	else
 	{
-		q18feedbackElement.innerHTML = "Try again?";
+		q18_feedbackElement.innerHTML = "Try again?";
 	}
 	
 	document.getElementById("q18_answer").value = "";
@@ -299,7 +300,7 @@ function q19_input()
 	}
 	else
 	{
-		q19feedbackElement.innerHTML = "Try again!";
+		q19_feedbackElement.innerHTML = "Try again!";
 	}
 	
 	document.getElementById("q19_answer").value = "";
@@ -309,13 +310,13 @@ function q20_input()
 {
 	var q20_feedbackElement = document.getElementById("q20_feedback");
 	
-	if (q20_answer.value == "speculate")
+	if (q20_answer.value == "prominent")
 	{
 		q20_feedbackElement.innerHTML = "Well done!";
 	}
 	else
 	{
-		q20feedbackElement.innerHTML = "Try again?";
+		q20_feedbackElement.innerHTML = "Try again?";
 	}
 	
 	document.getElementById("q20_answer").value = "";
