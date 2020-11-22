@@ -30,7 +30,7 @@ function RandomPosition()
 {
 
 	// Get a randon number between 0 and the length of the words array
-	var random_number = Math.random() * 4;
+	var random_number = Math.random() * 3;
 	var random_int = Math.floor(random_number);
 
 	// Check overlap 
@@ -73,7 +73,7 @@ function Question()
 	document.getElementById("Picture").src = "image/" + imageFileName;
 	
 	// / Select a position for the answer & update 
-	answerPosition = RandomPosition();
+	answerPosition = answerIndex;
 
 	if (answerPosition == 0)
 	{
