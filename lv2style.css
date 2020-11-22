@@ -79,13 +79,13 @@ h3 {
     } 
 
 canvas {
-        border:1px solid #6495ED;
-        background-color: #ADD8E6;
+        border:1px solid #5F9EA0;
+        background-color: #F0FFFF;
     }
 
 button {
-        border: none;
-    background-color: #6495ED;
+    border: none;
+    background-color: #5F9EA0;
     text-align: center;
     padding: 5px 10px;
     font: 20px Trebuchet MS;
