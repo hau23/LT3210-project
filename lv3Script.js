@@ -41,9 +41,9 @@ function RandomPosition()
 	return random_int;
 }
 
-var index = [];
 function Question()
 {
+	index = [];
 	// Distractors
 	var choice0Index = Distractor();
 	console.log("choice0Index:" + choice0Index);
