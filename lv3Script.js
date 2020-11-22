@@ -27,7 +27,7 @@ function RandomPosition()
 	// Get a randon number between 0 and the length of the words array
 	var random_number = Math.random() * 7;
 	var random_int = Math.floor(random_number);
-
+	
 	// Check overlap 
 	var generatedin = terms.includes(answerIndex);
 	do 
