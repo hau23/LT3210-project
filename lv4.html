@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
 
-    <title>Multiple Choices Game</title>
+    <title>Synonyms and Antonyms</title>
 
-    <script src="lv3Script.js"></script>
+    <link rel="stylesheet" href="lv4style.css">
 
+    <script src="lv4Script.js"></script>
 
     <style>
         @font-face {
@@ -14,12 +15,9 @@
             src: url("font/StayHappy.woff");
         }
 
-        html {
-            font-family: "Trebuchet MS";
-        }
-
         body {
             text-align: center;
+            font-family: "Trebuchet MS";
         }
 
         .header h1 {
@@ -47,7 +45,6 @@
             background-color: lightgray;
             color: black;
         }
-
 
         .background-container {
             position: absolute;
@@ -78,21 +75,13 @@
             height: 100%;
             z-index: -1;
         }
-        .MCcontainer {
-            margin: 1px;
-            border-radius: 20px;
-            border-color: #FFA500;
-            background-color: #FFFFE0;
-            padding: 20px;
-            box-shadow: 5px 10px #BDB76B;
-        }
     </style>
 </head>
 
-<body onload="Question()">
+<body>
     <div class="background-container">
         <div class="header">
-            <h1>Multiple Choices Game</h1>
+            <h1>Synonyms and Antonyms</h1>
         </div>
         <div class="top-menu">
             <a href="lv1.html">Level 1 Game</a>
@@ -101,35 +90,79 @@
             <a href="lv4.html">Level 4 Game</a>
         </div>
 
-        <h2> Find the correct meaning </h2>
+        <h2>Replace the words with the correct synonym</h2>
 
-        <p class="sentence"> --- </p>
-
-        <div class="MCcontainer">
-        <form id="choices">
-            <input type="radio" name="mc" id="input0" onclick="play()">
-            <span id="choice0"></span>
-            <br />
-
-            <input type="radio" name="mc" id="input1" onclick="play()">
-            <span id="choice1"></span>
-            <br />
-
-            <input type="radio" name="mc" id="input2" onclick="play()">
-            <span id="choice2"></span>
-            <br />
-
-            <input type="radio" name="mc" id="input3" onclick="play()">
-            <span id="choice3"></span>
-            <br />
+        rehabilitate
+        <!--restore-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
         </form>
-        </div>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
 
-        <br/>
-        <p id="message"></p>
+        retain
+        <!--reserve-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
 
-        <button id="pressnext" onclick="Question()" disabled>Next</button>
+        wilt
+        <!--wither-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
 
+        red
+        <!--scarlet-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
+
+        firm
+        <!--corporation-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
+
+        floor
+        <!--ground-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
+
+        stunned
+        <!--astonished-->
+        <br />
+        <form>
+            <input type="text" id="input_answer">
+        </form>
+        <button onclick="enter()">Enter</button>
+        <br />
+        <br />
+
+        <p id="myScore">Score: 0</p>
     </div>
 </body>
 </html>

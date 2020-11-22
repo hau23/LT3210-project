@@ -33,7 +33,7 @@ function draw()
 
 
 	// Draw model answer
-	ctx.font = "20px Comic Sans MS";
+	ctx.font = "20px Trebuchet MS";
 	ctx.fillStyle = "black";
 	ctx.fillText(answer, answer_x, answer_y);
 
@@ -107,7 +107,7 @@ function play()
 	// Draw plate
 	plate_x = 0;
 	plate_y = canvas.height - 10; 
-	ctx.fillStyle = "#5F9EA0";	
+	ctx.fillStyle = "#6495ED";	
 	ctx.fillRect(plate_x, plate_y,100,10);
 
 	// Stop previous animation, if any
@@ -132,7 +132,7 @@ function moveleft()
 	}
 
 	// Draw new plate
-	ctx.fillStyle = "#5F9EA0";	
+	ctx.fillStyle = "#6495ED";	
 	ctx.fillRect(plate_x, plate_y, 100, 10);
 
 }
@@ -150,7 +150,7 @@ function moveright()
 	}
 
 	// Draw new plate
-	ctx.fillStyle = "#5F9EA0";	
+	ctx.fillStyle = "#6495ED";	
 	ctx.fillRect(plate_x, plate_y, 100, 10);
 
 }

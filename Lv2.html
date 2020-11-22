@@ -1,50 +1,152 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<title>Level 2</title>
+    <meta charset="utf-8" />
 
-<script src="Lv2_script.js"></script>
+    <title>Words Landing Game</title>
+
+    <script src="lv2Script.js"></script>
 
 <style>
-html {
-  padding: 0;
-  margin: 0;
-  background: #F0F8FF;
-  font-family: Comic Sans MS;
+    @font-face {
+        font-family: "StayHappy";
+        src: url("font/StayHappy.woff");
+    }
+
+    html {
+        padding: 0;
+        margin: 0;
+        min-height: 100vh;
+        background: #F0F8FF;
+        width: 100%;
+    }
+
+    body {
+        font-family: "Trebuchet MS";
+    }
+
+    .header h1 {
+        padding: 10px;
+        font-size: 70px;
+        font-family: StayHappy;
+    }
+
+    .top-menu {
+        overflow: hidden;
+        background-color: black;
+        position: relative;
+        display: block;
+    }
+
+    .top-menu a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .top-menu a:hover {
+        background-color: lightgray;
+        color: black;
+    }
+
+    .background-container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: block;
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+        left: 0;
+        top: 0;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
+
+    .background-container:before {
+        content: "";
+        display: block;
+        background-image: url('image/background.jpg');
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.43;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    /*h1 {
+        font-family: "StayHappy";
+        font-weight: 800;
+        text-align: center;
+        font-size: 5em;
+    }*/
+
+    h3 {
+        font-family: "StayHappy";
+        font-size: 30px;
+    } 
+
+    canvas {
+        border:1px solid #6495ED;
+        background-color: #ADD8E6;
+    }
+
+    button {
+        border: none;
+    background-color: #6495ED;
+    text-align: center;
+    padding: 5px 10px;
+    font: 20px Trebuchet MS;
+    display: inline-block;
 }
-canvas {
-  border:1px solid #5F9EA0;
-  background-color: #F0FFFF;
-}
-button {
-  border: none;
-  background-color: #5F9EA0;
-  text-align: center;
-  padding: 5px 10px;
-  font: 20px Comic Sans MS;
-  display: inline-block;
+
+    #game {
+    text-align: center;
+    margin: 0 auto;
 }
 </style>
 
 </head>
 
 <body>
+    <div class="background-container">
+        <div id="game">
 
-<h1> Catch the Correct Word </h1>
-<h2 id="ms"></h2>
+            <div class="header">
+                <h1>Words Landing Game</h1>
+            </div>
+            <div class="top-menu">
+                <a href="lv1.html">Level 1 Game</a>
+                <a href="lv2.html">Level 2 Game</a>
+                <a href="lv3.html">Level 3 Game</a>
+                <a href="lv4.html">Level 4 Game</a>
+            </div>
+            <h3 span style="color:#6495ED"> Be careful! Only catch the correct meaning! </h3>
+            
 
-<p id="question"></p>
-<br/>
+            <h2 id="ms"></h2>
 
-<canvas id="myCanvas" width="500" height="250"></canvas>
-<br/>
+            <p id="question"></p>
+            <br />
 
-<button onclick="play()">Play</button>
-<button onclick="moveleft()">&#8678;</button>
-<button onclick="moveright()">&#8680;</button>
-<br/>
+            <canvas id="myCanvas" width="500" height="250"></canvas>
+            <br />
 
-<p id="message">Press Play</p>
+            <button onclick="play()">Play</button>
+            <button onclick="moveleft()">&#8678;</button>
+            <button onclick="moveright()">&#8680;</button>
+            <br />
+
+            <p id="message">Press Play</p>
+        </div>
+    </div>
 </body>
 </html>
