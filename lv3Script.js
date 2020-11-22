@@ -1,62 +1,53 @@
-// Arrays to store the words
-var chinwords = ["疼痛","扶手椅","彎曲","毯","毛蟲","複雜"];
-var engwords = ["ache","armchair","bend","blanket","caterpillar","complicated"];
+// Arrays to store terms
+var terms = ["agriculture","industry","landscape","literature","guidebook"];
 
 // Global variable for position of correct answer
 var answerPosition = -1;
 
 // Get random index for distractors
-function RandomDistractor()
+function Distractor()
 {
-	// Get a randon number between 0 and the length of the words array
 	var random_number = Math.random() * english.length;
-	
-	// Get rid of decimal places to make the random number an integer
 	var random_int = Math.floor(random_number);
 
 	return random_int;
 }
+// Get random index for image
+function RandomImage()
+{
+	var random_number = Math.random() * terms.length;
+	var random_int = Math.floor(random_number);
 
-function getRandomEng()
+	return random_int;
+}
+function RandomPosition()
 {
 	// Get a randon number between 0 and the length of the words array
-	var random_number = Math.random() * engwords.length;
-	
-	// Get rid of decimal places to make the random number an integer
+	var random_number = Math.random() * 4;
 	var random_int = Math.floor(random_number);
 
 	return random_int;
 }
-
-function getRandomPosition()
-{
-	// Get a randon number between 0 and the length of the words array
-	var random_number = Math.random() * 5;
-	
-	// Get rid of decimal places to make the random number an integer
-	var random_int = Math.floor(random_number);
-
-	return random_int;
-}
-
 function Question()
 {
-	// Select and display the distractors
-	var choice0Index = RandomDistractor();
-	var choice1Index = RandomDistractor();
-	var choice2Index = RandomDistractor();	
-	var choice3Index = RandomDistractor();	
+	// Distractors
+	var choice0Index = Distractor();
+	var choice1Index = Distractor();	
+	var choice2Index = Distractor();	
+	var choice3Index = Distractor();
 	document.getElementById("choice0").innerHTML = english[choice0Index];
 	document.getElementById("choice1").innerHTML = english[choice1Index];
 	document.getElementById("choice2").innerHTML = english[choice2Index];
 	document.getElementById("choice3").innerHTML = english[choice3Index];
 
-	// Select and display 
-	var answerIndex = getRandomEng();
-	var answer = chinwords[answerIndex];
+	// Image
+	var answerIndex = RandomImage();
+	var answer = terms[answerIndex];
+	var imageFileName = answer + ".jpg";
+	document.getElementById("Picture").src = imageFileName;
 	
-	// Select a position for the answer & update the <span> element of the corresponding radio button (i.e. replace the original distractor)
-	answerPosition = getRandomPosition();
+	// / Select a position for the answer & update 
+	answerPosition = RandomPosition();
 
 	if (answerPosition == 0)
 	{
@@ -84,13 +75,10 @@ function Question()
 	// Disable "Next" button
 	document.getElementById("pressnext").disabled = true;
 	document.getElementById("message").innerHTML = "Choose the correct meaning in the sentence carefully!";
-
 }
-
 function play()
 {
 	// Read user's answers
-	// Find out which radio button was checked, and get the user's answer
 	var userPosition = -1;
 
 	if (document.getElementById("input0").checked)
@@ -111,8 +99,6 @@ function play()
 	}
 
 	// Give feedback
-	// TODO: Compare user's answer with answerWord
-	// var output = "Correct answer is " + answerPosition + "; user chose " + userPosition;
 	if (answerPosition == userPosition)
 	{
 		document.getElementById("message").innerHTML = "Correct! You are smart!";
