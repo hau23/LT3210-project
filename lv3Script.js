@@ -7,10 +7,12 @@ var answerPosition = -1;
 // Get random index for distractors
 function Distractor()
 {
-	var random_number = Math.random() * terms.length;
-	var random_int = Math.floor(random_number);
+	// var random_number = Math.random() * terms.length;
+	// var random_int = Math.floor(random_number);
+	return Math.floor(Math.random() * (max - min + 1) ) + min;
+	Math.floor(Math.random() * (max - min + 1) ) + min;
 
-	return random_int;
+	// return random_int;
 }
 // Get random index for image
 function RandomImage()
