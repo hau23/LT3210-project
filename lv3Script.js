@@ -67,7 +67,7 @@ function Question()
 	var answerIndex = RandomPosition();
 	var answer = terms[storedIndex[answerIndex]];
 	// take term index
-	// var termsindex = terms.indexOf(answer)
+	var termsindex = terms.indexOf(answer)
 	var imageFileName = answer + ".jpg";
 	document.getElementById("Picture").src = "image/" + imageFileName;
 	
