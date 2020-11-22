@@ -46,19 +46,28 @@ function Question()
 {
 	// Distractors
 	var choice0Index = Distractor();
-	var choice1Index = Distractor();	
-	var choice2Index = Distractor();	
+	console.log("choice0Index:" + choice0Index);
+	var choice1Index = Distractor();
+	console.log("choice1Index:" + choice1Index);	
+	var choice2Index = Distractor();
+	console.log("choice2Index:" + choice2Index);	
 	var choice3Index = Distractor();
+	console.log("choice3Index:" + choice3Index);
+
 	document.getElementById("choice0").innerHTML = terms[choice0Index];
+	console.log("choice0:" + terms[choice0Index]);
 	document.getElementById("choice1").innerHTML = terms[choice1Index];
+	console.log("choice1:" + terms[choice1Index]);
 	document.getElementById("choice2").innerHTML = terms[choice2Index];
+	console.log("choice2:" + terms[choice2Index]);
 	document.getElementById("choice3").innerHTML = terms[choice3Index];
+	console.log("choice3:" + terms[choice3Index]);
 
 	// Image
 	var answerIndex = RandomPosition();
-	var answer = terms[answerIndex];
+	var answer = terms[storedIndex[answerIndex]];
 	// take term index
-	var termsindex = terms.indexOf(answer)
+	// var termsindex = terms.indexOf(answer)
 	var imageFileName = answer + ".jpg";
 	document.getElementById("Picture").src = "image/" + imageFileName;
 	
