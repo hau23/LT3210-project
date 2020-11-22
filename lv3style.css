@@ -76,10 +76,10 @@
             z-index: -1;
         }
         .MCcontainer {
-            margin: 30px;
+            margin: 25px;
             border-radius: 20px;
             border-color: #FFE4B5;
-            background-color: #FFFFE0;
+            background-color: #FFE4B5;
             padding: 20px;
-            box-shadow: 5px 10px #BDB76B;
+            box-shadow: 2px 5px #EEE8AA;
         }
