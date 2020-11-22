@@ -28,6 +28,13 @@ function RandomPosition()
 	var random_number = Math.random() * 7;
 	var random_int = Math.floor(random_number);
 
+	// Check overlap 
+	var generatedin = terms.includes(answerIndex);
+	do 
+	{
+		callback();
+	} while (generatedin)
+
 	return random_int;
 }
 function Question()
