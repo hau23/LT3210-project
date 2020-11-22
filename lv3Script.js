@@ -1,6 +1,6 @@
 // Arrays to store terms
 var terms = ["agriculture","business","industry","landscape","literature","guidebook","journal","manufacture"];
-
+var index = []
 // Global variable for position of correct answer
 var answerPosition = -1;
 
@@ -9,10 +9,21 @@ function Distractor()
 {
 	// var random_number = Math.random() * terms.length;
 	// var random_int = Math.floor(random_number);
-	return Math.floor(Math.random() * (terms.length - 1 + 1) ) + 0;
-	Math.floor(Math.random() * (terms.length - 1 + 1) ) + 0;
+	// return Math.floor(Math.random() * (terms.length - 1 + 1) ) + 0;
+	do 
+	{
+	// Get a randon number between 0 and the length of the words array
+	var random_number = Math.random() * terms.length -1;
+	var random_int = Math.floor(random_number);
 
-	// return random_int;
+	// Check overlap 
+	var generatedin = terms.includes(random_int);
+
+	} while (generatedin)
+
+	index.push('random_int');
+
+	return random_int;
 }
 // Get random index for image
 function RandomImage()
@@ -24,9 +35,15 @@ function RandomImage()
 }
 function RandomPosition()
 {
+
 	// Get a randon number between 0 and the length of the words array
-	var random_number = Math.random() * 7;
+	var random_number = Math.random() * 4;
 	var random_int = Math.floor(random_number);
+
+	// Check overlap 
+	// var generatedin = terms.includes(random_int);
+
+	// } while (generatedin)
 
 	return random_int;
 }
@@ -46,7 +63,7 @@ function Question()
 	var answerIndex = RandomImage();
 	var answer = terms[answerIndex];
 	var imageFileName = answer + ".jpg";
-	document.getElementById("Picture").src = imageFileName;
+	document.getElementById("Picture").src = "image/" + imageFileName;
 	
 	// / Select a position for the answer & update 
 	answerPosition = RandomPosition();
