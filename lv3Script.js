@@ -52,6 +52,7 @@ function Question()
 	// Image
 	var answerIndex = RandomImage();
 	var answer = terms[answerIndex];
+	var imageFileName = answer + ".jpg";
 	document.getElementById("Picture").src = "image/" + imageFileName;
 	
 	// / Select a position for the answer & update 
