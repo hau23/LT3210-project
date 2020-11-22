@@ -2,15 +2,17 @@
 
 var score = 0;
 
-function enter()
+function start()
 {
-
+	document.getElementById("display").innerHTML = q1;
+	var q1 = "rehabilitate"
+	
 }
 
 function hint()
 {
 	var q1hint = "restore";
-	var q1hint = qihint.replace(/a|e|i|o|u/g, "*")
+	var q1hint = q1hint.replace(/a|e|i|o|u/g, "*")
 	document.getElementById("q1").value = q1hint;
 
 	var q2 = "reserve";
@@ -50,23 +52,22 @@ function feedback()
 	document.getElementById("feedback").innerHTML = feedback;
 }
 
-function correct()
+function play()
 {
-	var correct = (q1 == "restore");
+	var answer = document.getElementById("answer").value;
+	var correct = ;
 	
-	var correct = (q2 == "reserve");
-	
-	var correct = (q3 == "wither");
-	
-	var correct = (q4 == "scarlet");
-	
-	var correct = (q5 == "corporation");
-	
-	var correct = (q6 == "ground");
-	
-	var correct = (q7 == "astonished");
-	
-}
+	var feedback = "You're correct!";
+	if (answer != correct)
+	{
+ 		feedback = "The correct answer is "" + correct + ".";
+	}
+	else
+	{
+		score++;
+	}
+	document.getElementById("feedback").innerHTML = feedback;
+	document.getElementById("score").innerHTML = "Score: " + score;
 
 function myscore()
 {

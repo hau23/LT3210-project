@@ -1,0 +1,13 @@
+@font-face {
+	font-family: "StayHappy";
+	src:url("font/StayHappy.woff");
+}
+
+h1 {
+	color:blue;
+	font-family:StayHappy
+}
+
+body {
+  background-color: lightblue;
+}
