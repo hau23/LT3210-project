@@ -1,5 +1,5 @@
 // Arrays to store terms
-var terms = ["agriculture","industry","landscape","literature","guidebook"];
+var terms = ["agriculture","business","industry","landscape","literature","guidebook","journal","manufacture"];
 
 // Global variable for position of correct answer
 var answerPosition = -1;
@@ -7,10 +7,12 @@ var answerPosition = -1;
 // Get random index for distractors
 function Distractor()
 {
-	var random_number = Math.random() * english.length;
-	var random_int = Math.floor(random_number);
+	// var random_number = Math.random() * terms.length;
+	// var random_int = Math.floor(random_number);
+	return Math.floor(Math.random() * (terms.length - 1 + 1) ) + 0;
+	Math.floor(Math.random() * (terms.length - 1 + 1) ) + 0;
 
-	return random_int;
+	// return random_int;
 }
 // Get random index for image
 function RandomImage()
@@ -23,7 +25,7 @@ function RandomImage()
 function RandomPosition()
 {
 	// Get a randon number between 0 and the length of the words array
-	var random_number = Math.random() * 4;
+	var random_number = Math.random() * 7;
 	var random_int = Math.floor(random_number);
 
 	return random_int;
@@ -35,10 +37,10 @@ function Question()
 	var choice1Index = Distractor();	
 	var choice2Index = Distractor();	
 	var choice3Index = Distractor();
-	document.getElementById("choice0").innerHTML = english[choice0Index];
-	document.getElementById("choice1").innerHTML = english[choice1Index];
-	document.getElementById("choice2").innerHTML = english[choice2Index];
-	document.getElementById("choice3").innerHTML = english[choice3Index];
+	document.getElementById("choice0").innerHTML = terms[choice0Index];
+	document.getElementById("choice1").innerHTML = terms[choice1Index];
+	document.getElementById("choice2").innerHTML = terms[choice2Index];
+	document.getElementById("choice3").innerHTML = terms[choice3Index];
 
 	// Image
 	var answerIndex = RandomImage();
