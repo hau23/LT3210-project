@@ -13,7 +13,7 @@ function Distractor()
 	do 
 	{
 	// Get a randon number between 0 and the length of the words array
-	var random_number = Math.random() * terms.length -1;
+	var random_number = Math.random() * (terms.length -1);
 	var random_int = Math.floor(random_number);
 
 	// Check overlap 
