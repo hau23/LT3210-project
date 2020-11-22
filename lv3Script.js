@@ -17,7 +17,7 @@ function Distractor()
 	var random_int = Math.floor(random_number);
 
 	// Check overlap 
-	var index = terms.includes(random_int);
+	var generatedin = index.includes(random_int);
 
 	} while (generatedin)
 
